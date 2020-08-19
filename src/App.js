@@ -1,11 +1,11 @@
 import React from 'react'
 import logo from './logo.svg'
 import { Button } from 'antd'
-import './App.less'
+import style from './App.less'
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.App}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
