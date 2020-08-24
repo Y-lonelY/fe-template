@@ -1,10 +1,9 @@
 import React from 'react'
-
-export default (): React.ReactNode => {
+export default (props: { children?: React.ReactNode }): any => {
   return (
     <>
       <header>header</header>
-      <div>1</div>
+      <div>{props.children}</div>
       <footer>footer</footer>
     </>
   )
