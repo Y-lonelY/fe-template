@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default (): React.ReactNode => {
-  return <div>Welcome to FrontEnd Template!</div>
+  return <div>This is Panel One!</div>
 }

@@ -1,18 +1,28 @@
-// import { RouteType } from './data.d'
-// import Welcome from '@'
-// import BasicLayout from '@/layout/BasicLayout'
+import { RouteType } from './data.d'
+import Welcome from '@/pages/Welcome'
+import PanelOne from '@/pages/panel/CompOne'
+import PanelTwo from '@/pages/panel/CompTwo'
 
-const routes = [
+const routes: RouteType[] = [
   {
     path: '/',
-    name: 'basic',
-    redirect: '/grow',
-    // component: BasicLayout,
+    name: 'home',
+    redirect: '/welcome',
+  },
+  {
+    path: '/welcome',
+    name: 'welcome',
+    component: Welcome,
     routes: [
       {
-        path: '/weight',
-        name: 'welcome',
-        // component: Welcome,
+        path: '/p1',
+        name: 'panel1',
+        component: PanelOne,
+      },
+      {
+        path: '/p2',
+        name: 'panel2',
+        component: PanelTwo,
       },
     ],
   },
