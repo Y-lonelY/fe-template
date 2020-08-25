@@ -16,28 +16,11 @@ function RouterRender() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route
-          path="/"
-          component={() => {
-            return (
-              <BasicLayout>
-                <Switch>
-                  <Route path="/p1" exact component={() => <PanelOne />} />
-                  <Route path="/p1/p1" exact component={() => <PanelOne />}>
-                    <Redirect to="/p2" />
-                  </Route>
-                  <Route path="/p2" exact component={() => <PanelTwo />} />
-                </Switch>
-              </BasicLayout>
-            )
-          }}
-        >
-          {/* <Redirect
-            to={{
-              pathname: '/p1',
-            }}
-          /> */}
+        <Route path="/" exact component={BasicLayout}>
+          <Redirect to="/p1" />
         </Route>
+        <Route path="/p1" component={PanelOne} />
+        <Route path="/p2" component={PanelTwo} />
       </Switch>
     </BrowserRouter>
   )
