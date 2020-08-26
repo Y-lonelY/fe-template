@@ -1,11 +1,17 @@
 import React from 'react'
-export default (props: { children?: React.ReactNode }, match: any): any => {
-  console.log(match)
+import { Layout } from 'antd'
+import style from './index.module.less'
+
+const { Header, Footer, Content } = Layout
+
+export default (props: { children?: React.ReactNode }): any => {
   return (
     <>
-      <header>header</header>
-      <div>{props.children}</div>
-      <footer>footer</footer>
+      <Layout className={style.layout}>
+        <Header>This is the header render content!</Header>
+        <Content>{props.children}</Content>
+        <Footer>This is the footer render content!</Footer>
+      </Layout>
     </>
   )
 }
