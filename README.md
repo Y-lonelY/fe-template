@@ -1,12 +1,14 @@
+English | [简体中文](./README.zh-CN.md)
+
 # FE-TEMPLATE
 
-This is a fe-template **React** project based on [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) and (antd)[https://ant.design/docs/react/introduce-cn]
+This is a fe-template **React** project based on [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) and [antd](https://ant.design/docs/react/introduce-cn)
 
-## init module
+## Attention Point
 
 1. In `.prettierrc` set `{ "endOfLine": "auto" }` to solve **Delete \`cr\` eslint(prettier/prettier)**
 
-2. `config-overrides.js` use to override config of create react app，you can see  to learn more
+2. `config-overrides.js` use to override config of create react app，you can see to learn more on [react-app-rewired](https://github.com/timarney/react-app-rewired/)
 
 3. you need to config `src/typing.d.ts` to declare global moduels, which will be compile by ts
 
