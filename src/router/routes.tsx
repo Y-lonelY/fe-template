@@ -6,7 +6,7 @@ import { RouteType } from './data.d'
 console.log(routes)
 
 function renderRoutes(data: RouteType, prevPath?: string) {
-  const { path, name, exact, component, redirect, routes } = Object.assign(
+  const { path, name, exact, redirect, routes } = Object.assign(
     {},
     {
       exact: true,
