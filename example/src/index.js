@@ -1,11 +1,9 @@
-// import { hot } from 'react-hot-loader'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
-// const HotApp = hot(App)
 
 ReactDOM.render(
   <React.StrictMode>

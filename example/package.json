@@ -1,5 +1,5 @@
 {
-  "name": "current",
+  "name": "example",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,7 +32,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "example": "cd example && yarn install && yarn start"
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

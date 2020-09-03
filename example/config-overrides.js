@@ -2,7 +2,8 @@
 const { override, addLessLoader, addWebpackAlias } = require('customize-cra')
 const rewireReactHotLoader = require('react-app-rewire-hot-loader')
 const path = require('path')
-// const { getThemeVariables } = require('antd/dist/theme')
+
+console.log(path.resolve(__dirname, './src'))
 
 module.exports = override(
   addLessLoader({
