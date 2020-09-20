@@ -1,14 +1,33 @@
 import React from 'react'
-import { Button } from 'antd'
-import style from './style.module.less'
+import { Button, Space } from 'antd'
+import { useHistory } from 'react-router'
 import image from '@/assets/welcome.jpg'
+import style from './style.module.less'
 
 export default (): React.ReactNode => {
+  const history = useHistory()
   return (
     <div className={style.main}>
-      <h2 className={style.title}>Welcome to FrontEnd Template!</h2>
+      <h2 className={style.title}>Welcome to React Template!</h2>
       <img className={style.image} src={image} alt="welecome" />
-      <Button type="primary">A button to test antd theme!</Button>
+      <Space>
+        <Button
+          type="primary"
+          onClick={() => {
+            history.push('/welcome/p1')
+          }}
+        >
+          P1
+        </Button>
+        <Button
+          type="primary"
+          onClick={() => {
+            history.push('/welcome/p2')
+          }}
+        >
+          P2
+        </Button>
+      </Space>
     </div>
   )
 }

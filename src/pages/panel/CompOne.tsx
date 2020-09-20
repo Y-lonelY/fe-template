@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default (props: any): React.ReactNode => {
-  console.log(props)
   return (
     <>
       <div>Show the React-Router render params below!</div>
