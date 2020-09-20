@@ -24,6 +24,7 @@
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
+    "react-error-catcher": "^1.0.0",
     "react-hot-loader": "^4.12.21",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
@@ -54,6 +55,7 @@
     "customize-cra": "^1.0.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
-    "react-app-rewire-hot-loader": "^2.0.1"
+    "react-app-rewire-hot-loader": "^2.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.3"
   }
 }

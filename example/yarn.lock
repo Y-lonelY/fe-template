@@ -9504,6 +9504,11 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
+react-error-catcher@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-error-catcher/-/react-error-catcher-1.0.0.tgz#4b02bbf60033fedf88f61483c37b68dc60960053"
+  integrity sha512-gESnsvuY7wJVNaO0QeQM/dEpKuBFS9ckyWhqGCkhC7wQjNC29oG8VwM6A49ATG7j1T+q9HkSHHDZPm2ElcHZtw==
+
 react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
@@ -10026,6 +10031,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+rollup-plugin-peer-deps-external@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-peer-deps-external/-/rollup-plugin-peer-deps-external-2.2.3.tgz#059a8aec1eefb48a475e9fcedc3b9e3deb521213"
+  integrity sha512-W6IePXTExGXVDAlfZbNUUrx3GxUOZP248u5n4a4ID1XZMrbQ+uGeNiEfapvdzwx0qZi5DNH/hDLiPUP+pzFIxg==
 
 rsvp@^4.8.4:
   version "4.8.5"

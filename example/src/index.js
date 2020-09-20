@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import * as Catcher from 'react-error-catcher'
 
+console.log(Catcher)
 
 ReactDOM.render(
   <React.StrictMode>

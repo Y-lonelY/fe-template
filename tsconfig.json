@@ -1,7 +1,7 @@
 {
   "extends": "./paths.json",
   "compilerOptions": {
-    "outDir": "build/dist",
+    // "outDir": "build/dist",
     "module": "esnext",
     "target": "esnext",
     "lib": [
