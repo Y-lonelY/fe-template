@@ -4,6 +4,7 @@ export interface RouteType {
   path: string
   name: string
   exact?: boolean
+  layout?: boolean
   // When true, will match if the path is case sensitive.
   sensitive?: boolean
   component?: any

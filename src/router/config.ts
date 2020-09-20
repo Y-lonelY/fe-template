@@ -8,6 +8,7 @@ const routes: RouteType[] = [
     path: '/',
     name: 'home',
     redirect: '/welcome',
+    layout: false,
   },
   {
     path: '/welcome',
