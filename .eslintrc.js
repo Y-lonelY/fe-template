@@ -34,8 +34,6 @@ module.exports = {
     // hooks
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    // prttier
-    "prettier/prettier": ["warn", {"singleQuote": true, "parser": "flow", "endOfLine":"auto"}],
     semi: ["error", "never"],
     camelcase: 0,
   },
