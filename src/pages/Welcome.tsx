@@ -4,7 +4,7 @@ import { useHistory } from 'react-router'
 import image from '@/assets/welcome.jpg'
 import style from './style.module.less'
 
-export default (): React.ReactNode => {
+const Welcome = (): React.ReactNode => {
   const history = useHistory()
   return (
     <div className={style.main}>
@@ -31,3 +31,5 @@ export default (): React.ReactNode => {
     </div>
   )
 }
+
+export default Welcome

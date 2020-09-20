@@ -5,7 +5,6 @@ import style from './index.module.less'
 const { Header, Footer, Content } = Layout
 
 export default (props: { children?: React.ReactNode }): any => {
-  console.log(props.children)
   return (
     <>
       <Layout className={style.layout}>
