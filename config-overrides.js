@@ -2,13 +2,16 @@
 const { override, addLessLoader, addWebpackAlias } = require('customize-cra')
 const rewireReactHotLoader = require('react-app-rewire-hot-loader')
 const path = require('path')
-// const { getThemeVariables } = require('antd/dist/theme')
+const { getThemeVariables } = require('antd/dist/theme')
 
 module.exports = override(
   addLessLoader({
     lessOptions: {
       modifyVars: {
-        'primary-color': '#1DA57A',
+        ...getThemeVariables({
+          dark: true,
+        }),
+        'primary-color': '#13C2C2',
       },
       javascriptEnabled: true,
     },
