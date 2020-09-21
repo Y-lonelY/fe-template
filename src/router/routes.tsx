@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom'
 import BasicLayout from '@/layout/BasicLayout'
 import { routes } from './config'
@@ -15,18 +15,6 @@ function renderRoutes(data: RouteType, prevPath?: string) {
     defaultConfig,
     data
   )
-
-  // const OtherComponent = React.lazy(() => import(data.component) as any)
-
-  // function MyComponent(porps: any) {
-  //   return (
-  //     <div>
-  //       <Suspense fallback={<div>Loading...</div>}>
-  //         <OtherComponent {...porps} />
-  //       </Suspense>
-  //     </div>
-  //   )
-  // }
 
   return (
     <React.Fragment key={name}>

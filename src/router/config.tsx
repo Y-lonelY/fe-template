@@ -1,8 +1,18 @@
-import { RouteType } from './data.d'
-import { lazyImport } from '@/utils/lazy'
+import React from 'react'
+import { Spin } from 'antd'
+import { RouteType } from './data'
+import { lazyImport, AsyncImport } from '@/utils/lazy'
 import Welcome from '@/pages/Welcome'
 import PanelOne from '@/pages/panel/CompOne'
 import PanelTwo from '@/pages/panel/CompTwo'
+
+const Loading = () => {
+  return (
+    <div style={{ width: '100vh', height: '100vh', margin: 'auto' }}>
+      <Spin />
+    </div>
+  )
+}
 
 const routes: RouteType[] = [
   {
@@ -13,8 +23,9 @@ const routes: RouteType[] = [
   {
     path: '/welcome',
     name: 'welcome',
-    component: lazyImport({
+    component: AsyncImport({
       action: import('../pages/Welcome'),
+      loading: Loading(),
     }),
     layout: false,
     routes: [
