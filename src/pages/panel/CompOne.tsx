@@ -1,9 +1,12 @@
 import React from 'react'
+import style from './style.module.less'
 
 export default (props: any): React.ReactNode => {
   return (
-    <>
-      <div>Show the React-Router render params below!</div>
+    <div className={style.main}>
+      <div className={style.mainTitle}>
+        Show the React-Router render params below!
+      </div>
       <div>
         {Object.entries(props).map((item) => {
           const [key, value] = item
@@ -15,6 +18,6 @@ export default (props: any): React.ReactNode => {
           )
         })}
       </div>
-    </>
+    </div>
   )
 }

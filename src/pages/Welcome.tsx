@@ -17,7 +17,7 @@ const Welcome = (): React.ReactNode => {
             history.push('/welcome/p1')
           }}
         >
-          P1
+          Router
         </Button>
         <Button
           type="primary"
