@@ -1,10 +1,10 @@
 import React from 'react'
-import style from './style.module.less'
+import styles from '@/styles/atoms/page.less'
 
 export default (props: any): React.ReactNode => {
   return (
-    <div className={style.main}>
-      <div className={style.mainTitle}>
+    <div className={styles.test}>
+      <div className={styles.test}>
         Show the React-Router render params below!
       </div>
       <div>

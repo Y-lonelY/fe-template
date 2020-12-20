@@ -2,8 +2,6 @@ import React from 'react'
 import { Spin } from 'antd'
 import { RouteType } from './data'
 import { lazyImport, AsyncImport } from '@/utils/lazy'
-import Welcome from '@/pages/Welcome'
-import PanelOne from '@/pages/panel/CompOne'
 import PanelTwo from '@/pages/panel/CompTwo'
 
 const Loading = () => {

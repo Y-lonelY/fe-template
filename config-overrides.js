@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 const {
   override,
+  fixBabelImports,
   addLessLoader,
   addWebpackAlias,
   addWebpackPlugin,
@@ -16,15 +17,10 @@ const themeVariables = getLessVars(
   path.join(__dirname, './src/styles/variables.less')
 )
 const darkVars = {
-  ...getThemeVariables({
-    dark: true,
-  }),
-  'primary-color': '#13C2C2',
+  ...getLessVars('./node_modules/antd/lib/style/themes/dark.less'),
 }
 const lightVars = {
-  ...getThemeVariables({
-    dark: false,
-  }),
+  ...getLessVars('./node_modules/antd/lib/style/themes/default.less'),
 }
 
 fs.writeFileSync('./src/dark.json', JSON.stringify(darkVars))
@@ -32,7 +28,7 @@ fs.writeFileSync('./src/light.json', JSON.stringify(lightVars))
 fs.writeFileSync('./src/theme.json', JSON.stringify(themeVariables))
 
 const themeOption = {
-  stylesDir: path.join(__dirname, './src'),
+  stylesDir: path.join(__dirname, './src/styles'),
   antDir: path.join(__dirname, './node_modules/antd'),
   varFile: path.join(__dirname, './src/styles/variables.less'),
   themeVariables: Array.from(
@@ -56,6 +52,11 @@ const lessLoader = () => {
 module.exports = override(
   addWebpackAlias({
     '@': path.resolve(__dirname, './src'),
+  }),
+  fixBabelImports('import', {
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+    style: true,
   }),
   addWebpackPlugin(new AntDesignThemePlugin(themeOption)),
   lessLoader(),
