@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout } from 'antd'
+import { Layout, Button } from 'antd'
 import style from './index.module.less'
 
 const { Header, Footer, Content } = Layout
@@ -8,7 +8,19 @@ export default (props: { children?: React.ReactNode }): any => {
   return (
     <>
       <Layout className={style.layout}>
-        <Header>This is the header render content!</Header>
+        <Header>
+          This is the header render content!
+          <Button
+            onClick={() => {
+              const w = window as any
+              w.less.modifyVars({
+                '@primary-color': '#000000',
+              })
+            }}
+          >
+            theme
+          </Button>
+        </Header>
         <Content>{props.children}</Content>
         <Footer>This is the footer render content!</Footer>
       </Layout>

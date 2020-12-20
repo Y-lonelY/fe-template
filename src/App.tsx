@@ -1,7 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
 import Router from '@/router/routes'
-import './App.less'
+import './styles/global.less'
 
 function App() {
   return <Router />
