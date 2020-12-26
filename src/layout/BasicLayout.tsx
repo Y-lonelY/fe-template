@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Layout, Button } from 'antd'
+import RTHeader from './Header'
 import LightVars from '@/light.json'
 import DarkVars from '@/dark.json'
 import style from './index.module.less'
@@ -12,21 +13,9 @@ export default (props: { children?: React.ReactNode }): any => {
   return (
     <>
       <Layout className={style.layout}>
-        <Header>
+        <RTHeader>
           This is the header render content!
-          <Button
-            type="primary"
-            onClick={() => {
-              const w = window as any
-              w.less.modifyVars({
-                ...DarkVars,
-                '@primary-color': '#000000',
-              })
-            }}
-          >
-            theme
-          </Button>
-        </Header>
+        </RTHeader>
         <Content>{props.children}</Content>
         <Footer>This is the footer render content!</Footer>
       </Layout>

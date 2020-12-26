@@ -12,7 +12,7 @@ const fs = require('fs')
 
 const { getLessVars } = require('antd-theme-generator')
 const AntDesignThemePlugin = require('antd-theme-webpack-plugin')
-const { getThemeVariables } = require('antd/dist/theme')
+
 const themeVariables = getLessVars(
   path.join(__dirname, './src/styles/variables.less')
 )
@@ -28,9 +28,11 @@ fs.writeFileSync('./src/light.json', JSON.stringify(lightVars))
 fs.writeFileSync('./src/theme.json', JSON.stringify(themeVariables))
 
 const themeOption = {
-  stylesDir: path.join(__dirname, './src/styles'),
   antDir: path.join(__dirname, './node_modules/antd'),
+  stylesDir: path.join(__dirname, './src/styles'),
+  // define which variables to change
   varFile: path.join(__dirname, './src/styles/variables.less'),
+  // define which variables can be changed
   themeVariables: Array.from(
     new Set([
       ...Object.keys(darkVars),
