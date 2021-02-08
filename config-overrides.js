@@ -33,13 +33,7 @@ const themeOption = {
   // define which variables to change
   varFile: path.join(__dirname, './src/styles/variables.less'),
   // define which variables can be changed
-  themeVariables: Array.from(
-    new Set([
-      ...Object.keys(darkVars),
-      ...Object.keys(lightVars),
-      ...Object.keys(themeVariables),
-    ])
-  ),
+  themeVariables: Array.from(new Set([...Object.keys(themeVariables)])),
   generateOnce: false, // generate color.less on each compilation
 }
 
